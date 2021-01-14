@@ -67,8 +67,8 @@ VAR
     fbMotion6: FB_MotionStage;
 	
 	// VLS Motor 7; camera translation
-	{attribute 'TcLinkTo' := '	.bLimitForwardEnable:=TIIB[VLS_EP7041-1002_E7]^STM Status^Status^Digital input 1;
-								.bLimitBackwardEnable:=TIIB[VLS_EP7041-1002_E7]^STM Status^Status^Digital input 2'}
+	{attribute 'TcLinkTo' := '	.bLimitForwardEnable:=TIIB[VLS_EP7041-1002_E7]^STM Status^Status^Digital input 2;
+								.bLimitBackwardEnable:=TIIB[VLS_EP7041-1002_E7]^STM Status^Status^Digital input 1'}
     {attribute 'pytmc' := '
         pv: TMO:VLS:MMS:CD
         field: DESC VLS Camera Distance
@@ -209,14 +209,5 @@ ELSIF (fbStartDelay.Q) THEN
 END_IF
 ]]></ST>
     </Implementation>
-    <LineIds Name="Main">
-      <LineId Id="330" Count="0" />
-      <LineId Id="20" Count="89" />
-      <LineId Id="321" Count="2" />
-      <LineId Id="325" Count="3" />
-      <LineId Id="324" Count="0" />
-      <LineId Id="110" Count="0" />
-      <LineId Id="6" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
